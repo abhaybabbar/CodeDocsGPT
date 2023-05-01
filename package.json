@@ -1,0 +1,70 @@
+{
+  "name": "codedocsgpt",
+  "displayName": "CodeDocsGPT",
+  "publisher": "AbhayBabbar",
+  "author": {
+    "name": "Abhay Babbar"
+  },
+  "description": "CodeDocsGPT is a Visual Studio Code extension that generates code documentation for you with the help of OpenAI's powerful GPT language model. Say goodbye to spending hours writing documentation for your code - simply enter your OpenAI API key once and let GPT do the heavy lifting",
+  "icon": "images/CodeDocsGPT-icon.png",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codedocsgpt.writeDocComment",
+        "title": "Write CodeDocs Comment"
+      },
+      {
+        "command": "codedocsgpt.updateAPIKey",
+        "title": "Update OpenAi API key (CodeDocsGPT)"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "codedocsgpt.writeDocComment",
+          "group": "navigation",
+          "when": "editorFocus"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.77.0",
+    "@vscode/test-electron": "^2.3.0",
+    "eslint": "^8.39.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "openai": "^3.2.1"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abhaybabbar/CodeDocsGPT/issues",
+    "email": "babbarabhay1852@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhaybabbar/CodeDocsGPT"
+  }
+}
