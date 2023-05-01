@@ -181,6 +181,7 @@ function getCommentTags(languageId) {
     case "php":
     case "swift":
     case "kotlin":
+    case "solidity":
       commentStart = "/*";
       commentEnd = "*/";
       break;
