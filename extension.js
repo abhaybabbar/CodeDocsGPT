@@ -168,6 +168,7 @@ function getCommentTags(languageId) {
     case "typescript":
     case "javascriptreact":
     case "typescriptreact":
+    case "dart":
       commentStart = "/*";
       commentEnd = "*/";
       break;
