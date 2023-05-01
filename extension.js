@@ -168,6 +168,7 @@ function getCommentTags(languageId) {
     case "typescript":
     case "javascriptreact":
     case "typescriptreact":
+    case "dart":
       commentStart = "/*";
       commentEnd = "*/";
       break;
@@ -181,6 +182,7 @@ function getCommentTags(languageId) {
     case "php":
     case "swift":
     case "kotlin":
+    case "solidity":
       commentStart = "/*";
       commentEnd = "*/";
       break;
